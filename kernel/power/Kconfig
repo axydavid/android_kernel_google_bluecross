@@ -135,6 +135,12 @@ config PM_SLEEP
 	select PM
 	select SRCU
 
+config WAKELOCK_BLOCKER
+    	bool "Enable wakelock blocker"
+    	default y
+    	---help---
+     	Allows blocking specific wakelocks from userspace via sysfs.
+
 config PM_SLEEP_SMP
 	def_bool y
 	depends on SMP
